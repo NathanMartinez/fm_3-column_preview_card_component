@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    /* Neutral */
+    /* (paragraphs) */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 100vh;
+    font-size: 15px;
+    color: var(--very-light-gray);
+    padding: 1rem;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 300px;
+}
+
+section {
+    padding: 2rem;
+}
+
+section h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 1rem 0;
+    color: var(--very-light-gray);
+}
+
+section p {
+    line-height: 1.8rem;
+    color: var(--transparent-white);
+}
+
+section button {
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--very-light-gray);
+    font-weight: 700;
+}
+
+#sedan button:hover,
+#suv button:hover,
+#luxury button:hover {
+    cursor: pointer;
+    color: var(--very-light-gray);
+    outline: 2px solid var(--very-light-gray);
+    background-color: transparent;
+}
+
+#sedan {
+    background-color: var(--bright-orange);
+}
+
+#sedan button {
+    color: var(--bright-orange);
+}
+
+#suv {
+    background-color: var(--dark-cyan);
+}
+
+#suv button {
+    color: var(--dark-cyan);
+}
+
+#luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+#luxury button {
+    color: var(--very-dark-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--bright-orange);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 820px) {
+    main {
+        flex-direction: row;
+        width: 800px;
+    }
+
+    section button {
+        margin-top: 4rem;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 11px;
+        text-align: center;
+        color: var(--bright-orange);
+    }
+}
